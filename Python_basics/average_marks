@@ -1,0 +1,6 @@
+n=int(input("Enter the number of subjects"))
+a=int(input())
+b=int(input())
+c=int(input())
+avg=(a+b+c)/n
+print(avg)
