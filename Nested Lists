@@ -1,0 +1,13 @@
+marksheet=[]
+score=[]
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        name = input()
+        marks = float(input())
+        marksheet+=[[name,marks]]
+        score+=[marks]
+    b=sorted(list(set(score)))[1]
+    for a,c in sorted(marksheet):
+        if c==b:
+            print(a)
+            
