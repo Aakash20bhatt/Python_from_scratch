@@ -1,0 +1,17 @@
+''' 5432*
+    543*1
+    54*21
+    5*321
+    *4321'''
+ 
+n=int(input())
+for i in range(n):
+    k=n
+    for j in range(n):
+        if i+j==n-1:
+            print("*",end='')
+        else:
+            print(k,end='')
+        k=k-1
+    print()
+    
