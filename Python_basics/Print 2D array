@@ -1,0 +1,28 @@
+n,m=map(int,input().split())
+matrix=[]
+for i in range(n):
+    matrix.append(input())
+i=0
+while n>0:
+    for _ in range(n):
+        print(matrix[i])
+    n=n-1
+    i+=1
+    
+SAMPLE INPUT
+
+3 3
+1    2    3
+4    5    6
+7    8    9
+
+
+
+SAMPLE OUTPUT
+
+1    2    3
+1    2    3
+1    2    3
+4    5    6
+4    5    6
+7    8    9
