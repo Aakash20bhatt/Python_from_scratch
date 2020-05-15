@@ -1,0 +1,9 @@
+string=input()
+word=string.split()
+small=word[0]
+
+for i in range(0,len(word)):
+    
+    if len(small)>len(word[i]):
+        small=word[i]
+print(small)
