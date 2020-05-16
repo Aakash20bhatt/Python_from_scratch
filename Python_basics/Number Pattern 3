@@ -1,0 +1,22 @@
+#This is the pattern we want to print.
+1
+11
+121
+1221
+
+
+
+
+n=int(input())
+i=0
+while i<n:
+    j=0
+    while j<i+1:
+        if j==0 or i==j:
+            print("1",end="")
+        else :
+            print("2",end="")
+        j=j+1
+    print()
+    i=i+1
+
