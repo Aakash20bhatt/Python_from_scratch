@@ -1,0 +1,15 @@
+1234
+123
+12
+1
+
+
+n=int(input())
+
+while n>0:
+    j=1
+    while j<=n:
+        print(j,end='')
+        j=j+1
+    print()
+    n=n-1
