@@ -1,0 +1,34 @@
+  *
+ ***
+*****
+ ***
+  *
+  
+  
+n=int(input())
+n1=(n+1)//2
+i=1
+while i<=n1:
+    space=1
+    while space<=n1-i:
+        print(" ",end="")
+        space=space+1
+    star=1
+    while star<=(2*i-1):
+        print("*",end="")
+        star= star+1
+    print()
+    i=i+1
+n2 = n - n1
+i = n2
+while i >=1:
+    j = 1
+    while j <= n2-i+1:
+        print(' ',end = '')
+        j += 1
+    j = 1
+    while j <=(2*i-1):
+        print('*', end = '')
+        j += 1
+    print()
+    i -= 1
