@@ -1,0 +1,23 @@
+num=int(input())
+matrix = [["" for x in range(num)] for y in range(num)]
+n=1
+low=0
+high=num-1
+if num==1:
+    print(1)
+else:
+    while low<=high:
+        for j in range(num):
+            matrix[low][j]=n
+            n=n+1
+        low=low+1
+        if low<=high:
+            for j in range(num):
+                matrix[high][j] = n
+                n=n+1
+        
+        high=high-1
+    for i in range(num):
+        for j in range(num):
+            print(matrix[i][j], end=" ")
+        print()
