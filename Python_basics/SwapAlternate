@@ -1,0 +1,13 @@
+def swappairwise(a):
+  i = 0
+  l = len(a)
+  if (l%2==0):
+        a[1:l:2],a[:l:2] = a[:l:2],a[1:l:2]
+  else:
+    a[1:l-1:2],a[:l-1:2] = a[:l-1:2],a[1:l-1:2]
+  for i in range(len(a)):
+    print(a[i], end=" ")
+  return
+n = int(input())
+li = [int(x) for x in input().split()]
+c = swappairwise(li)
