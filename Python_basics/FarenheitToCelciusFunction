@@ -1,0 +1,13 @@
+def printTable(start,end,step):
+    cur_temp=start
+    while cur_temp<=end:
+        c=5/9 * (cur_temp-32)
+        print(cur_temp," ",int(c))
+        cur_temp=cur_temp+step
+
+	   
+s = int(input())
+e = int(input())
+step = int(input())
+
+printTable(s,e,step)
