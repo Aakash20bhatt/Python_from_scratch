@@ -1,0 +1,13 @@
+size1=int(input())
+li1=[int(i) for i in input().split()]
+size2=int(input())
+li2=[int(i) for i in input().split()]
+for i in range(0,size1,1):
+    for j in range(0,size2,1):
+        if li1[i]==li2[j]:
+            print(li1[i])
+            li2[j]=-1
+            break
+
+    
+
