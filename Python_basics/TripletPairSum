@@ -1,0 +1,26 @@
+def triplet_sum(li,Sum):
+    for i in range(len(li)):
+        for j in range(i+1,len(li)):
+            for k in range(j+1,len(li)):
+                if li[i]+li[j]+li[k]==Sum:
+                    
+                    a=li[i]
+                    b=li[j]
+                    c=li[k]
+                    
+                    if(a<=b and a<=c): 
+                        if(b<c): 
+                            print(a, b, c, sep=' ')
+                        else: print(a, c, b, sep=' ') 
+                    elif(b<=a and b<=c): 
+                        if(a<c): 
+                            print(b, a, c, sep=' ') 
+                        else: print(b, c, a, sep=' ') 
+                    else: 
+                        if(a<b): 
+                            print(c, a, b, sep=' ') 
+                        else: print(c, b, a, sep=' ')
+n=int(input())
+li=[int(x) for x in input().split()]
+Sum= int(input())
+triplet_sum(li,Sum)
