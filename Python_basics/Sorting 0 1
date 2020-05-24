@@ -1,0 +1,23 @@
+def sort(l):
+    start=0
+    end=n-1
+    while start<=end:
+        if l[start]==0:
+            start = start+1
+            continue
+        if l[end] ==1:
+            end = end-1
+            continue
+        if  l[start]==1 and l[end]==0:
+            l[start],l[end]=l[end],l[start]
+            start=start+1
+            end=end-1           
+        
+            
+    return l
+                                    
+n=int(input())
+l=[int(i) for i in input().split()]
+a=sort(l)
+for i in range(n):
+    print(a[i],end=' ')
