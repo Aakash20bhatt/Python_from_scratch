@@ -1,0 +1,13 @@
+def pair_sum(li,Sum):
+    for i in range(len(li)):
+        for j in range(i+1,len(li)):
+            if li[i]+li[j]==Sum:
+                
+                if li[i]<li[j]:
+                    print(li[i],li[j],sep=" ")
+                else :
+                    print(li[j],li[i],sep=" ")
+n=int(input())
+li=[int(x) for x in input().split()]
+Sum= int(input())
+pair_sum(li,Sum)
