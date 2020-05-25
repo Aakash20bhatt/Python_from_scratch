@@ -1,0 +1,26 @@
+def sort(l,l1):
+    i=0
+    j=0
+    l2=[]
+    while i<n and j<n1:
+        if l[i]<l1[j]:
+            l2.append(l[i])
+            i=i+1
+        else:
+            l2.append(l1[j])
+            j=j+1
+    while i<n:
+        l2.append(l[i])
+        i=i+1
+    while j<n1:
+        l2.append(l1[j])
+        j=j+1
+    return l2
+
+n=int(input())
+l=[int(x) for x in input().split()]
+n1=int(input())
+l1=[int(y) for y in input().split()]
+arr=sort(l,l1)
+for i in range(len(arr)):
+    print(arr[i],end=" ")
