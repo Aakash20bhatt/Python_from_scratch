@@ -1,0 +1,15 @@
+def sort(l):
+    for i in range(1,n-1):
+        j=i-1
+        temp=l[i]
+        while j>=0 and l[j]>temp:
+            l[j+1]=l[j]
+            j=j-1
+        l[j+1]=temp
+    return l
+        
+n=int(input())
+l=[int(x) for x in input().split()]
+li=sort(l)
+for i in range(n):
+    print(li[i],end=" ")
