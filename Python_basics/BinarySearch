@@ -1,0 +1,17 @@
+def search(l,e):
+    start=0
+    end=len(l)-1
+    while start<=end:
+        mid=(start+end)//2
+        if l[mid]==e:
+            return mid
+        elif l[mid] < e:
+            start=mid+1
+        else:
+            end=mid-1
+    return -1
+n=int(input())
+l=[int(x) for x in input().split()]
+e=int(input())
+index=search(l,e)
+print(index)
