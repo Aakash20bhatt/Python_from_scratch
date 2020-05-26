@@ -1,0 +1,13 @@
+n=int(input())
+l=[int(x) for x in input().split()]
+r=int(input())
+i=0
+while i<r:
+    temp=l[0]
+    for j in range(n-1):
+        l[j]=l[j+1]
+    l[n-1]=temp
+    i=i+1
+
+for i in range(n):
+    print(l[i],end=" ")
