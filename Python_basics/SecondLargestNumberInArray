@@ -1,0 +1,19 @@
+n=int(input())
+l=[int(x) for x in input().split()]
+max=-2147483648
+min=-2147483648
+i=0
+if n<=1:
+    print(-2147483648)
+else:
+    while i<n:
+        if l[i]>max: #and i==0:
+            temp=max
+            max=l[i]
+            min=temp
+            
+        elif l[i]>min and l[i]!=max:
+            min = l[i]
+        i=i+1
+        
+print(min)
