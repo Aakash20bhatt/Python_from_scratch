@@ -1,0 +1,27 @@
+You are given an integer array containing only 0s, 1s and 2s. Write a solution to sort this array using one scan only.
+You need to change in the given array itself. So no need to return or print anything.
+
+def  sort(l,n):
+    i=0
+    nz=0
+    nt=n-1
+    while i<n and nt>=i and nz<=i:
+        if l[i]==1:
+            i=i+1
+        elif l[i]==0 and i>0 :
+            l[i],l[nz]=l[nz],l[i]
+            i=i+1
+            nz=nz+1
+        elif l[i]==0 and i==0:
+            i=i+1
+            nz=1
+        elif l[i]==2:
+            l[i],l[nt]=l[nt],l[i]
+            nt=nt-1
+    return l
+
+num=int(input())
+arr=[int(x) for x in input().split()]
+li=sort(arr,num)
+for i in range(num):
+    print(li[i],end=" ")
