@@ -1,0 +1,21 @@
+Given two strings, S and T, check if they are permutations of each other. Return true or false.
+Permutation means - length of both the strings should same and should contain same set of characters. Order of characters doesn't matter.
+
+def check(s,s1):
+    count=0
+    count1=0
+    
+    if len(s)==len(s1):
+        for i in s:
+            count=count+ord(i)
+        for i in s1:
+            count1=count1+ord(i)
+        if count==count1:
+            return 1
+    return 0
+s=input()
+s1=input()
+if check(s,s1)==1:
+    print("true")
+else:
+    print("false")
