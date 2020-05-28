@@ -1,0 +1,13 @@
+s=input()
+s1=s[::-1]
+a=s1.split()
+start=0
+end=len(a)-1
+while start<=end:
+    a[start],a[end]=a[end],a[start]
+    start=start+1
+    end=end-1
+
+c=""
+c=" ".join(a)
+print(c)
