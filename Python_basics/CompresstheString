@@ -1,0 +1,20 @@
+def compress(st):
+    comp=""
+    c=1
+    for i in range(len(st)-1):
+        if st[i]==st[i+1]:
+            c=c+1
+        else:
+            if c>1:
+            	comp=comp+st[i]+str(c)
+            else:
+                comp=comp+st[i]
+            c=1
+    if c>1:
+        comp=comp+st[-1]+str(c)
+    else:
+        comp=comp+st[-1]
+    return comp
+    
+st=input()
+print(compress(st))
