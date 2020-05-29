@@ -4,3 +4,43 @@ Sample Input:
  4 4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
 Sample Output:
  1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10 
+
+def spiralPrint(arr):
+    
+    row=len(arr)
+    col=len(arr[0])
+    row_start=0
+    row_end=row
+    col_start=0
+    col_end=col
+    count=1
+    li=[]
+    while count<=row*col:
+        for i in range(col_start,col_end):
+            li.append(arr[row_start][i])
+            count+=1
+        row_start+=1
+        
+        for i in range(row_start,row_end):
+            li.append(arr[i][col_end-1])
+            count+=1
+        col_end-=1
+        
+        for i in range(col_end-1,col_start-1,-1):
+            li.append(arr[row_end-1][i])
+            count+=1
+            
+        row_end-=1
+        
+        for i in range(row_end-1,row_start-1,-1):
+            li.append(arr[i][col_start])
+            count+=1
+        col_start+=1
+    for i in range(len(li)):
+        print(li[i],end=" ")
+
+#Main
+l=[int(i) for i in input().strip().split(' ')]
+m, n=l[0], l[1]
+arr = [ [ l[(j*n)+i+2] for i in range(n)] for j in range(m)]
+spiralPrint(arr)
