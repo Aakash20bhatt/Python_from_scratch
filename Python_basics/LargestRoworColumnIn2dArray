@@ -1,0 +1,38 @@
+def largestRowCol(arr):
+    m=len(arr)
+    n=len(arr[0])
+    max_row_sum=-1
+    max_row_index=-1
+    max_col_index=-1
+    max_col_sum=-1
+    
+    for j in range(n):
+        col_sum=0
+        for i in range(m):
+            col_sum+=arr[i][j]
+        if col_sum > max_col_sum:
+            max_col_sum=col_sum
+            max_col_index=j
+            
+    for i in range(m):
+        row_sum=0
+        for j in range(n):
+            row_sum+=arr[i][j]
+        if row_sum > max_row_sum:
+            max_row_sum = row_sum
+            max_row_index = i
+    
+    return max_row_index,max_row_sum,max_col_index,max_col_sum
+    
+    
+        
+    
+#Main
+m, n=(int(i) for i in input().strip().split(' '))
+l=[int(i) for i in input().strip().split(' ')]
+arr = [ [ l[(j*n)+i] for i in range(n)] for j in range(m)]
+ri,rs,ci,cs=largestRowCol(arr)
+if rs>cs:
+    print("row",ri,rs)
+else:
+    print("column",ci,cs)
