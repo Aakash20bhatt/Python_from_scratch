@@ -1,0 +1,16 @@
+str=input().split()
+m,n=int(str[0]),int(str[1])
+
+li=[ int(j) for j in input().split()]
+l=[[li[(j*n)+i] for i in range(n)] for j in range(m)]
+arr=[]
+sum=0
+for i in range(m):
+    for j in range(n):
+        sum=sum+l[i][j]
+    arr.append(sum)
+    sum=0
+    
+for i in range(m):
+    print(arr[i],end=" ")
+    
