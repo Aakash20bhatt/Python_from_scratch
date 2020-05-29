@@ -6,7 +6,7 @@ Sample Output :
 1 5 9 10 6 2 3 7 11 12 8 4
 
 def wavePrint(arr):
-    # Please add your code here
+    
     row=len(arr)
     col=len(arr[0])
     l1=[]
