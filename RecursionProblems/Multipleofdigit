@@ -1,0 +1,15 @@
+"Without using (*) ,you can use "+" or"-" "
+
+def mulofdigit(a,b):
+	if b==0:
+		return 0
+	if b==1:
+		return a
+	return mulofdigit(a,b-1)+a
+
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+
+a=int(input())
+b=int(input())
+print(mulofdigit(a,b))
