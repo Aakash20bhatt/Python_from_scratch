@@ -1,0 +1,7 @@
+def sumofdigit(s):
+  if s<10:
+    return s
+  return s%10 +sumofdigit(s//10)
+  
+s=int(input())
+print(sumofdigit(s))
