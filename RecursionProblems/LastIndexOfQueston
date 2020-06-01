@@ -1,0 +1,22 @@
+def lastIndex(arr, x,si):
+    if len(arr)==0:
+        return -1
+    if x not in arr:
+        return -1
+    if x == arr[si] :
+        return si
+    
+    last_index=lastIndex(arr,x,si-1)
+    return last_index
+    
+    
+    
+
+# Main
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+n=int(input())
+arr=list(int(i) for i in input().strip().split(' '))
+x=int(input())
+si=n-1
+print(lastIndex(arr, x,si))
