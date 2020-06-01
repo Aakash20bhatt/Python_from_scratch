@@ -1,0 +1,21 @@
+def firstIndex(arr, x,si):
+    if len(arr)==0:
+        return -1
+    if x not in arr:
+        return -1
+    if x == arr[si] :
+        return si
+    
+    first_index=firstIndex(arr,x,si+1)
+    return first_index
+    
+    
+
+# Main
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+n=int(input())
+arr=list(int(i) for i in input().strip().split(' '))
+x=int(input())
+si=0
+print(firstIndex(arr, x,si))
