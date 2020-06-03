@@ -1,0 +1,25 @@
+def removeConsecutiveDuplicates(string):
+    # Please add your code here
+    if len(string)==0:
+        return string
+    if len(string)==1:
+        return string
+	
+    
+    remove = removeConsecutiveDuplicates(string[1:])
+    
+    if string[0]==string[1]:
+        
+        return  ""+ remove
+    else:
+        return string[0] + remove
+    
+    return remove
+
+
+# Main
+from sys import setrecursionlimit
+setrecursionlimit(110000)
+string = input().strip()
+
+print(removeConsecutiveDuplicates(string))
