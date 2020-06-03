@@ -1,7 +1,7 @@
 def firstIndex(arr, x,si):
-    if len(arr)==0:
+    if len(arr)==0 :
         return -1
-    if x not in arr:
+    if x not in arr :
         return -1
     if x == arr[si] :
         return si
