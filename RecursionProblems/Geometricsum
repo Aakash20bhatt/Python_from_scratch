@@ -1,0 +1,14 @@
+Given k, find the geometric sum i.e.
+1 + 1/2 + 1/4 + 1/8 + ... + 1/(2^k) 
+def gsum(k):
+    if k==0:
+        return 1
+    
+    a= gsum(k-1)
+    
+    ans= a+(1/2)**k
+    
+    return ans
+
+k=int(input())
+print("%0.5f"%gsum(k))
