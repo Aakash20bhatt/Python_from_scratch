@@ -1,0 +1,10 @@
+def string_to_integer(s):
+    if len(s)==0:
+        return 0
+    return int(s)
+
+from sys import setrecursionlimit
+
+setrecursionlimit(20000)
+s=input()
+print(string_to_integer(s))
