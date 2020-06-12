@@ -1,0 +1,16 @@
+
+Write a program to print first x terms of the series 3N + 2 which are not multiples of 4.
+
+
+x=int(input())
+i=1
+while x>0:
+    ans=3*i+2
+    if ans%4!=0:
+        print(ans,end=" ")
+        x-=1
+    i+=1
+        
+    
+    
+    
